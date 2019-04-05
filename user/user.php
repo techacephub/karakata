@@ -30,7 +30,7 @@ else{
     }elseif( $password !== $confirm){
         echo "password not match";
     }else{
-$sql = "INSERT INTO `user`(`surname`, `othername`, `gender_id`, `email`, `username`, `password`, `c_password`, `dob`, `date_created`, `user_type_id`) VALUES ('$surName','$otherName','$gender','$filter','$username','$password','$confirm','$dob',NOW(),'$userType')";
+$sql = "INSERT INTO `user`(`surname`, `othername`, `gender_id`, `email`, `username`, `password`, `c_password`, `dob`, `date_created`, `user_type_id`) VALUES ('$surName','$otherName','$gender','$filter','$username','$hashpass','$confirm','$dob',NOW(),'$userType')";
 $query = $conn->query($sql);
 	if($query){
 	echo 'data uploaded successfully';
